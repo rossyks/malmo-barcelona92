@@ -102,6 +102,77 @@ h1, h2, h3, .title, .collab-name {
   }
 }
 
+
+/* --- FINAL RESPONSIVE TUNING --- */
+.hero {
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr) !important;
+}
+
+h1 {
+  font-size: clamp(56px, 9.2vw, 152px) !important;
+  line-height: .78 !important;
+  max-width: 760px !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+}
+
+h2 {
+  font-size: clamp(42px, 7vw, 104px) !important;
+  line-height: .86 !important;
+  letter-spacing: -0.065em !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  hyphens: none !important;
+}
+
+@media (min-width: 900px) {
+  .hero {
+    align-items: center !important;
+  }
+
+  .hero h1,
+  h1 {
+    font-size: clamp(72px, 8.8vw, 146px) !important;
+    max-width: 720px !important;
+  }
+
+  .hero .sub,
+  .hero p {
+    max-width: 620px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: clamp(58px, 20vw, 86px) !important;
+    line-height: .82 !important;
+    max-width: 100% !important;
+  }
+
+  h2 {
+    font-size: clamp(38px, 12vw, 58px) !important;
+    line-height: .9 !important;
+    letter-spacing: -0.055em !important;
+  }
+
+  .collab-name,
+  .song-title,
+  .artist-name {
+    font-size: clamp(30px, 9vw, 44px) !important;
+    line-height: .92 !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+  }
+
+  .collab,
+  .collab-row,
+  .song,
+  .row {
+    grid-template-columns: 58px minmax(0, 1fr) !important;
+    gap: 18px !important;
+  }
+}
+
 </style>
 </head>
 <body>
